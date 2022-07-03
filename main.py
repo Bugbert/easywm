@@ -1,3 +1,3 @@
 #!/bin/python3
 
-execfile("gui/main.py")
+exec(open("gui/main.py").read())
