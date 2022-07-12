@@ -4,4 +4,3 @@ def main():
     print("started cli app")
     
     answers = Survey()
-    print(answers.server)
