@@ -1,3 +1,5 @@
+import os
+
 def escalation_program():
     from os.path import exists
 
@@ -11,3 +13,4 @@ def escalation_program():
 
 # Constants
 ESCALATION_PROGRAM = escalation_program()
+USERNAME = os.getlogin()

@@ -5,7 +5,8 @@ def main():
     DIST = distro.id()
     match DIST:
         case "arch":
-            from easywm.pkg.arch import system_wide_update, install, update
+            import easywm.pkg.arch
+            from arch import *
         case default:
             print("os not recognized")
             exit(5)
@@ -17,3 +18,9 @@ def main():
     system_wide_update()
     install(answers.wm)
     install(answers.term)
+
+    if answers.server == "wayland":
+        seatd_enable()
+    elif answers.server == "x11":
+        install('startx')
+
